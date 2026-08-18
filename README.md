@@ -5,6 +5,7 @@
 ## 数据集
 
 数据按赛季独立存放在 [`data/`](data/) 目录中。文件来自网站公开接口，已去除原始 OCR 文本、截图、用户提交信息、账号信息、访问凭据和服务端配置。
+部分战报来源：https://github.com/liamqma/sanmou-yanwu/tree/master/data/battles
 
 | 赛季 | 战报数量 | 文件 |
 | --- | ---: | --- |
