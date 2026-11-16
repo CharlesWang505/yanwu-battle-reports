@@ -1,28 +1,37 @@
-# 三國：謀定天下演武大會 S7-S16 戰報庫
+# 三國：謀定天下演武大會 S7-S17 戰報庫
 
 [简体中文](README.md) | 繁體中文
 
-本儲存庫公開《三國：謀定天下》演武大會 S7-S16 的結構化戰報資料，以及將戰報截圖整理為統一文字記錄時使用的 AI 提示詞。
+本儲存庫公開《三國：謀定天下》演武大會 S7-S17 的結構化戰報資料，以及將戰報截圖整理為統一文字記錄時使用的 AI 提示詞。
 
 ## 資料集
 
-資料按賽季獨立存放在 [`data/`](data/) 目錄中。檔案來自網站公開介面，已移除原始 OCR 文字、截圖、使用者提交資料、帳號資料、存取憑據和伺服器端設定。
+資料按賽季獨立存放在 [`data/`](data/) 目錄中。目前快照根據維護者提供的 2026-11-09 戰報匯出檔案產生，已移除原始 OCR 文字、截圖、使用者提交資料、帳號資料、存取憑據和伺服器端設定。舊版 `20260818` 快照保留，下表列出目前版本。
 部分戰報來源：https://github.com/liamqma/sanmou-yanwu/tree/master/data/battles
 
 | 賽季 | 戰報數量 | 檔案 |
 | --- | ---: | --- |
-| S7 | 425 | [`data/S7/S7-battle-reports-20260818.ywrlib.json`](data/S7/S7-battle-reports-20260818.ywrlib.json) |
-| S8 | 985 | [`data/S8/S8-battle-reports-20260818.ywrlib.json`](data/S8/S8-battle-reports-20260818.ywrlib.json) |
-| S9 | 1,319 | [`data/S9/S9-battle-reports-20260818.ywrlib.json`](data/S9/S9-battle-reports-20260818.ywrlib.json) |
-| S10 | 1,930 | [`data/S10/S10-battle-reports-20260818.ywrlib.json`](data/S10/S10-battle-reports-20260818.ywrlib.json) |
-| S11 | 3,050 | [`data/S11/S11-battle-reports-20260818.ywrlib.json`](data/S11/S11-battle-reports-20260818.ywrlib.json) |
-| S12 | 4,077 | [`data/S12/S12-battle-reports-20260818.ywrlib.json`](data/S12/S12-battle-reports-20260818.ywrlib.json) |
-| S13 | 5,813 | [`data/S13/S13-battle-reports-20260818.ywrlib.json`](data/S13/S13-battle-reports-20260818.ywrlib.json) |
-| S14 | 6,702 | [`data/S14/S14-battle-reports-20260818.ywrlib.json`](data/S14/S14-battle-reports-20260818.ywrlib.json) |
-| S15 | 7,443 | [`data/S15/S15-battle-reports-20260818.ywrlib.json`](data/S15/S15-battle-reports-20260818.ywrlib.json) |
-| S16 | 8,154 | [`data/S16/S16-battle-reports-20260818.ywrlib.json`](data/S16/S16-battle-reports-20260818.ywrlib.json) |
+| S7 | 438 | [`data/S7/S7-battle-reports-20261109.ywrlib.json`](data/S7/S7-battle-reports-20261109.ywrlib.json) |
+| S8 | 992 | [`data/S8/S8-battle-reports-20261109.ywrlib.json`](data/S8/S8-battle-reports-20261109.ywrlib.json) |
+| S9 | 1,352 | [`data/S9/S9-battle-reports-20261109.ywrlib.json`](data/S9/S9-battle-reports-20261109.ywrlib.json) |
+| S10 | 1,922 | [`data/S10/S10-battle-reports-20261109.ywrlib.json`](data/S10/S10-battle-reports-20261109.ywrlib.json) |
+| S11 | 3,026 | [`data/S11/S11-battle-reports-20261109.ywrlib.json`](data/S11/S11-battle-reports-20261109.ywrlib.json) |
+| S12 | 3,991 | [`data/S12/S12-battle-reports-20261109.ywrlib.json`](data/S12/S12-battle-reports-20261109.ywrlib.json) |
+| S13 | 5,650 | [`data/S13/S13-battle-reports-20261109.ywrlib.json`](data/S13/S13-battle-reports-20261109.ywrlib.json) |
+| S14 | 6,581 | [`data/S14/S14-battle-reports-20261109.ywrlib.json`](data/S14/S14-battle-reports-20261109.ywrlib.json) |
+| S15 | 7,599 | [`data/S15/S15-battle-reports-20261109.ywrlib.json`](data/S15/S15-battle-reports-20261109.ywrlib.json) |
+| S16 | 8,017 | [`data/S16/S16-battle-reports-20261109.ywrlib.json`](data/S16/S16-battle-reports-20261109.ywrlib.json) |
+| S17 | 8,248 | [`data/S17/S17-battle-reports-20261109.ywrlib.json`](data/S17/S17-battle-reports-20261109.ywrlib.json) |
 
 格式為 `yanwu-report-library-public` v1。每筆記錄保留戰果、左右陣型、武將、戰法和剩餘兵力等結構化欄位。
+
+### 篩選口徑
+
+2026-11-16 更新使用 `yanwu-tool-open` 的賽季武將庫、戰法庫及自帶戰法名稱，重新篩選 S7-S17，不按原始記錄的 S16/S17 標籤直接分組。雙方各須有 3 名武將，全部武將和攜帶戰法均須存在於目標賽季庫；同一戰報可以進入多個適用賽季，輸出記錄的 `season` 表示適用賽季，並不證明實際對戰發生於該賽季。
+
+原始匯出共 10,282 筆，按戰果、雙方陣型、武將、戰法和剩餘兵力去重後為 10,079 筆；重複項保留更新時間最新的記錄。名稱只移除首尾空白，不猜測修正 OCR、別名或標點。S17 嚴格篩選後保留 8,248 筆，其餘 1,831 筆包含無法匹配的武將或戰法；部分歷史影本不在目前戰法庫中，也會排除。因此本次數量可能低於舊版，且不代表完整歷史戰報數量。
+
+快照日期 `20261109` 對應原始匯出在北京時間的日期；`exportedAt` 保留原始匯出時間 `2026-11-08T17:05:22.229822+00:00`，不是本次整理時間。
 
 S1-S6 不包含在本公開戰報資料集中；S1-S2 的經典推薦資料不屬於本儲存庫的主要戰報庫。
 
@@ -38,8 +47,8 @@ S1-S6 不包含在本公開戰報資料集中；S1-S2 的經典推薦資料不�
 {
   "format": "yanwu-report-library-public",
   "version": 1,
-  "season": "S16",
-  "exportedAt": "2026-08-18T00:00:00.000Z",
+  "season": "S17",
+  "exportedAt": "2026-11-08T17:05:22.229822+00:00",
   "reports": []
 }
 ```
@@ -49,7 +58,7 @@ S1-S6 不包含在本公開戰報資料集中；S1-S2 的經典推薦資料不�
 ```json
 {
   "id": "UUID",
-  "season": "S16",
+  "season": "S17",
   "parsed": {
     "winnerSide": "left | right | 空字串",
     "leftTeam": {
@@ -68,8 +77,8 @@ S1-S6 不包含在本公開戰報資料集中；S1-S2 的經典推薦資料不�
 ## 校驗
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\data\S16\S16-battle-reports-20260818.ywrlib.json
-node -e "const fs=require('fs');const j=JSON.parse(fs.readFileSync('data/S16/S16-battle-reports-20260818.ywrlib.json','utf8'));console.log(j.reports.length)"
+Get-FileHash -Algorithm SHA256 .\data\S17\S17-battle-reports-20261109.ywrlib.json
+node -e "const fs=require('fs');const j=JSON.parse(fs.readFileSync('data/S17/S17-battle-reports-20261109.ywrlib.json','utf8'));console.log(j.reports.length)"
 ```
 
 ## 授權與聲明
